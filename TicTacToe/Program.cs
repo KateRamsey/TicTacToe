@@ -22,7 +22,12 @@ namespace TicTacToe
             Console.WriteLine("Welcome to Kate's Tic-Tac-Toe!");
             Console.WriteLine();
             Console.WriteLine("What Difficulty would you like to play? (E, M, H)");
-            AIDifficulty = char.Parse(Console.ReadLine());
+            AIDifficulty = char.Parse(Console.ReadLine().ToUpper());
+            while (AIDifficulty != 'E' && AIDifficulty != 'M' && AIDifficulty != 'H')
+            {
+                Console.WriteLine("What Difficulty would you like to play? (E, M, H)");
+                AIDifficulty = char.Parse(Console.ReadLine().ToUpper());
+            }
             Console.WriteLine("Human Player X goes first");
             Console.WriteLine();
 
